@@ -1,0 +1,24 @@
+<app-header></app-header>
+<app-top-box></app-top-box>
+
+<div class="ui grid container" id="pagina">
+    <div class="row">
+        <div class="four wide column" id="left-column"><app-left-column></app-left-column></div>
+        <div class="twelve wide column" id="main-column">
+            <app-titulo titulo="Editar algoritmo"></app-titulo>
+            <form class="ui large form" (submit)="editar_algoritmo($event)">
+                Nombre: <input type="text" name="name" value="{{ this.algoritmo.algoritmo_actual.nombre }}"><br>
+                Descripción:<textarea name="description" value="{{ this.algoritmo.algoritmo_actual.descripcion }}"></textarea><br>
+                Imagen: <input type="file" name="imagen" accept="image/*"><br>
+                <br>
+                <div class="ui grid">
+                    <div class="four wide column centered">
+                        <input class="ui primary button" type="submit" value="Editar algoritmo" id="boton">
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+    
+</div>

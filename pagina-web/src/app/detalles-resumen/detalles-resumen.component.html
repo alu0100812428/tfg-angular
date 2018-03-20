@@ -1,0 +1,44 @@
+<div class="ui card">
+  <div class="content" id="titulo">
+     
+    <div class="header">Ejecucion</div>
+  </div>
+  <div class="content">
+    <p><b>Porcentaje completado: </b></p>
+    <p><b>Tiempo en ejecución: </b></p>
+    <p><b>Estado:</b></p>
+    <div *ngIf="ejecucion.ejecutando">Ejecutando</div>
+    <div *ngIf="!ejecucion.ejecutando">
+      <div *ngIf="!ejecucion.completado">En pausa</div> 
+      <div *ngIf="ejecucion.completado">Completado</div>
+    </div>
+  </div>
+  <div class="extra content">
+    <!--<button class="ui primary button"><i class="plus icon"></i>Ver detalles</button>-->
+    
+    <div *ngIf="ejecucion.ejecutando">
+      <div class="two ui buttons">
+        <button class="ui orange button" id="pausar_boton" (click)="this.ejecuciones.cambiar_estado(ejecucion.id_ejecucion)"><i class="pause icon"></i>Pausar</button>
+        <button class="ui red button" id="eliminar_boton" (click)="this.ejecuciones.eliminar_ejecucion(ejecucion.id_ejecucion,ejecucion.id_resumen)"><i class="minus circle icon"></i>Eliminar</button>
+      </div>
+    </div>
+    
+    <div *ngIf="!ejecucion.ejecutando">
+      <div *ngIf="!ejecucion.completado">
+        <div class="two ui buttons">
+          <button class="ui blue button" id="reanudar_boton" (click)="this.ejecuciones.cambiar_estado(ejecucion.id_ejecucion)"><i class="play icon"></i>Reanudar</button>
+          <button class="ui red button" id="eliminar_boton" (click)="this.ejecuciones.eliminar_ejecucion(ejecucion.id_ejecucion,ejecucion.id_resumen)"><i class="minus circle icon"></i>Eliminar</button>
+        </div>
+      </div>
+      
+      <div *ngIf="ejecucion.completado">
+        <div class="two ui buttons">
+          <button class="ui green button" id="reanudar_boton"><i class="play icon"></i>Ver datos</button>
+          <button class="ui red button" id="eliminar_boton" (click)="this.ejecuciones.eliminar_ejecucion(ejecucion.id_ejecucion,ejecucion.id_resumen)"><i class="minus circle icon"></i>Eliminar</button>
+        </div>
+      </div>
+    </div>
+ 
+    
+  </div>
+</div>

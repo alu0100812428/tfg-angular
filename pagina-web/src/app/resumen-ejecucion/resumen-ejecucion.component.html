@@ -1,0 +1,21 @@
+<div class="ui card">
+  <div class="content" id="titulo">
+     
+    <div class="header">{{ ejecucion.titulo }}</div>
+  </div>
+  <div class="content">
+    <p><b>Nombre del algoritmo: </b><br>{{ this.algoritmos.get_nombre(ejecucion.id_algoritmo) }}</p>
+    <p><b>Ejecuiones totales: </b><br>{{ this.ejecuciones.get_n_ejecuciones(ejecucion.id_resumen) }}</p>
+    <p><b>Completadas: </b><br>{{ this.ejecuciones.get_ejecuciones_completadas(ejecucion.id_resumen) }}</p>
+    <p><b>En ejecución: </b><br>{{ this.ejecuciones.get_ejecuciones_ejecutando(ejecucion.id_resumen) }}</p>
+    <p><b>En pausa: </b><br>{{ this.ejecuciones.get_ejecuciones_pausa(ejecucion.id_resumen) }}</p>
+    <p><b>Tiempo en ejecución: </b></p>
+  </div>
+  <div class="extra content">
+    <!--<button class="ui primary button"><i class="plus icon"></i>Ver detalles</button>-->
+    <div class="two ui buttons">
+      <a class="ui primary button" id="detalles_boton" (click)="get_ejecuciones(ejecucion.id_resumen)" [routerLink]="['/resumen_ejecucion', ejecucion.id_resumen]"><i class="plus icon"></i>Detalles</a>
+      <button class="ui red button" id="cancelar_boton" (click)="this.ejecuciones.eliminar_resumen(ejecucion.id_resumen)"><i class="minus circle icon"></i>Cancelar</button>
+    </div>
+  </div>
+</div>

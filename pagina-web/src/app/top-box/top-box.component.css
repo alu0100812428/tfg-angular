@@ -1,0 +1,9 @@
+.ui.menu{
+    border-radius: 0px;
+    margin-bottom: 10px;
+}
+.item.right.aligned{
+    border-color:lightgray;
+    border-style: solid;
+    border-width:0px 0.3px 0px 1px;
+}

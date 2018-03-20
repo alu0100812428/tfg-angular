@@ -1,0 +1,10 @@
+.ui.block.header{
+    /*background-color: #ffff1a;*/
+    
+    background-color: rgb(122, 59, 122);
+    color:white;
+    border-color:rgb(100, 40, 100);
+    border-width: 2px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.09);
+    margin-bottom: 15px;
+}

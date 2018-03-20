@@ -1,0 +1,36 @@
+<!--<button (click)="funcion()" class="ui button" >{{ modelo.nombre }}</button>-->
+<!--
+<button class="ui button">
+    <div class="ui grid row">
+        <div class="four wide column">
+            <img class="ui small image" src="{{modelo.imagen}}" id="img_modelo">
+        </div>
+        <div class="twelve wide column">
+            Nombre: {{modelo.nombre}} <br>
+            Descripción: {{modelo.descripcion}} <br>
+            Tamaño: {{modelo.tamano}} <br>
+            Fecha: {{modelo.fecha}} <br>
+        </div>
+    </div>
+
+</button>-->
+
+<div class="ui card">
+    <div class="image">
+        <img src="{{modelo.imagen}}" id="img_modelo">
+    </div>
+    <div class="content">
+        <a class="header">{{modelo.nombre}}</a>
+
+        <div class="description">
+          {{modelo.descripcion}}
+        </div>
+    </div>
+     <div class="extra content">
+          <!--<i class="user icon"></i>-->
+          <p>Tamaño: {{modelo.tamano}}<br>Fecha: {{modelo.fecha}}</p>
+    </div>
+    <a class="ui button" (click)="funcion(modelo.id)" [routerLink]="['/algoritmos', modelo.id]">Editar</a>
+    <a class="ui button" (click)="funcion(modelo.id)" [routerLink]="['/configurar_algoritmo', modelo.id]">Utilizar algoritmo</a>
+    <!--<button class="ui button">Utilizar algoritmo</button>-->
+</div>

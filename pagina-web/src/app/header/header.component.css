@@ -1,0 +1,18 @@
+#header{
+    background-color: rgb(122, 59, 122);
+    height: 25px;
+    border-radius: 0px;
+}
+
+#logo{
+    margin-left: 3px;
+    padding: 2px;
+    border-radius: 7px;
+    background-color: white;
+    height: 38px;
+    width: auto;
+}
+
+#texto {
+    color:white;
+}

@@ -1,0 +1,22 @@
+
+.ui.button{
+    border-color: lightgray;
+    border-style: solid;
+    border-width: 1px;
+    background-color: white;
+    text-align:left;
+}
+
+
+.ui.button:hover{
+    background-color: lightgray;
+}
+
+
+#img_modelo{
+    min-height: 150px;
+}
+
+.ui.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

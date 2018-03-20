@@ -1,0 +1,41 @@
+<app-header></app-header>
+
+<div class="ui middle aligned grid container" id="login_form">
+    <div class="row">
+        <div class="four wide column"></div>
+        <div class="eight wide column" id="login">
+            
+            <form class="ui large form segment" (submit)="registerUser($event)">
+                <h3 class="ui header">Registrarse</h3>
+                <div class="field">
+                    <label for="usuario">Usuario </label>
+                    <input type="text" name="usuario" placeholder="ejemplo" #usuario>
+                </div>
+                <div class="field">
+                    <label for="password">Contraseña </label>
+                    <input type="password" name="password" placeholder="ejemplo" #password>
+                </div>
+                <div class="field">
+                    <label for="nombre">Nombre </label>
+                    <input type="text" name="nombre" placeholder="ejemplo" #nombre>
+                </div>
+                
+                <div class="field">
+                    <label for="apellido">Apellido </label>
+                    <input type="text" name="apellido" placeholder="ejemplo" #apellido>
+                </div>
+                
+                <div class="field">
+                    <label for="email">Email </label>
+                    <input type="text" name="email" placeholder="ejemplo@ejemplo.com" #email>
+                </div>
+                <input class="ui button" type="submit" value="Crear cuenta">
+                
+                <div class="ui inverted divider"></div>
+                <a [routerLink]="['/login']">Login</a>
+                
+            </form>
+            
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<app-titulo titulo="Configuración de tareas"></app-titulo>
+
+<form class="ui large form" (submit)="enviar_tareas($event)">
+    Titulo: <input type="text" name="titulo"><br>
+    Numero de tareas: <input type="text" name="n_tareas"><br>
+    
+    <div class="ui grid">
+        <div class="four wide column centered">
+            <input class="ui primary button" type="submit" value="Enviar" id="boton">
+        </div>
+    </div>
+    
+</form>
